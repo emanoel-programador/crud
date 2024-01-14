@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('fantasia');
             $table->string('porte');
             $table->timestamps();
+            $table->string('cep');
+            $table->string('bairro');
+            $table->string('municipio');
         });
     }
 

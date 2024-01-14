@@ -2,6 +2,7 @@
     <div class="container mt-5">
 
         <h1> Empresa: {{$empresa->fantasia}}</h1>
+        
      
         <form action="">
 
@@ -22,7 +23,17 @@
                 <input type="email" class="form-control" placeholder="" wire:model="inputs.porte">
                 
             </div>
-
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Cep</label>
+                <input type="email" class="form-control" placeholder="" wire:model="inputs.cep">
+                
+            </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Bairro</label>
+                <input type="email" class="form-control" placeholder="" wire:model="inputs.bairro">
+                
+            </div>
      
         </form>
 

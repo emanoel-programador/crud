@@ -16,9 +16,14 @@ class MostrarEmpresas extends Component
         //salvar no banco com eloquent
         $empresa = new Empresa();
 
-        $empresa->razao_social = "globo sa";
-        $empresa->fantasia = "globo";
-        $empresa->porte = "grande";
+        $empresa->razao_social = $this->cnpj;
+        $empresa->fantasia = "Nome Fantasia Padrão";
+        $empresa->porte = "Pequena";
+
+        $empresa->razao_social = "";
+        $empresa->fantasia = "";
+        $empresa->porte = "";
+    
 
         $empresa->save();
 

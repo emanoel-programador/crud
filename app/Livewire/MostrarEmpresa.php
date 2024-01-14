@@ -22,7 +22,9 @@ class MostrarEmpresa extends Component
             'razao_social' => $this->empresa->razao_social,
             'porte' => $this->empresa->porte,
             'fantasia' => $this->empresa->fantasia,
-            
+            'cep' => $this->empresa->cep,
+            'bairro' => $this->empresa->bairro,
+            'municipio' => $this->empresa->municipio,   
         ];
 
     }
@@ -34,6 +36,9 @@ class MostrarEmpresa extends Component
             'porte' => $this->inputs['porte'],
             'razao_social' => $this->inputs['razao_social'],
             'fantasia' => $this->inputs['fantasia'],
+            'cep' => $this->inputs['cep'],
+           'bairro' => $this->inputs['bairro'],
+           'municipio' => $this->inputs['municipio'],
         ]);
 
     }

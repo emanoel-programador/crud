@@ -14,6 +14,9 @@
                 <th scope="col">Razão Social</th>
                 <th scope="col">Fantasia</th>
                 <th scope="col">Porte</th>
+                <th scope="col">cep</th>
+                <th scope="col">bairro</th>
+                <th scope="col">municipio</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Deletar</th>
               </tr>
@@ -26,6 +29,9 @@
                 <td>{{$empresa->razao_social}}</td>
                 <td>{{$empresa->fantasia}}</td>
                 <td>{{$empresa->porte}}</td>
+                <td>{{$empresa->cep}}</td>
+                <td>{{$empresa->bairro}}</td>
+                <td>{{$empresa->municipio}}</td>
                 <td><a href="{{route('empresa',['id' => $empresa->id ])}}">  <i class="fas fa-edit text-primary" wire:click="editEmpresa({{$empresa->id}})"></i>  </a> </td>
                 <td><i class="fas fa-trash text-danger" wire:click="deleteEmpresa({{$empresa->id}})"></i></td>
               </tr>
