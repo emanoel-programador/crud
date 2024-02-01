@@ -4,26 +4,29 @@ namespace App\Livewire;
 
 use App\Models\Empresa;
 use Livewire\Component;
+use Illuminate\Support\Facades\Http;
+
 
 class MostrarEmpresas extends Component
 {
 
-    public $cnpj = "";
+    public $cnpj  ;
 
     public function store(){
 
-
+        $response = Http::get('https://www.receitaws.com.br/v1/cnpj/' . $this->cnpj);
         //salvar no banco com eloquent
         $empresa = new Empresa();
+        
 
         $empresa->razao_social = $this->cnpj;
-        $empresa->fantasia = "Nome Fantasia Padrão";
-        $empresa->porte = "Pequena";
-
-        $empresa->razao_social = "";
-        $empresa->fantasia = "";
-        $empresa->porte = "";
-    
+        $empresa->fantasia = $response['fantasia'];
+        $empresa->porte = $response['porte'];
+        $empresa->cep = $response['cep'];
+        $empresa->bairro = $response['bairro'];
+        $empresa->municipio = $response['municipio'];
+        
+        
 
         $empresa->save();
 
